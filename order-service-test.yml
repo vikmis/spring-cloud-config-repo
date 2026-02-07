@@ -4,9 +4,6 @@ spring:
       - org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
       - org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration
 
-
-
-spring:
   datasource:
     url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
@@ -24,7 +21,7 @@ spring:
       enabled: false
     service-registry:
       auto-registration:
-        enabled: false   # ⭐ THIS IS THE MISSING PIECE
+        enabled: false
 
 eureka:
   client:
@@ -32,6 +29,8 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
 
-product:
-  service:
-    url: http://localhost:9090
+product-service:
+  url: http://localhost:9090
+
+payment-service:
+  url: http://localhost:9091
