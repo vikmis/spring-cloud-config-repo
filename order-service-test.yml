@@ -14,10 +14,15 @@ spring:
   cloud:
     discovery:
       enabled: false
+    service-registry:
+      auto-registration:
+        enabled: false   # ⭐ THIS IS THE MISSING PIECE
 
 eureka:
   client:
     enabled: false
+    register-with-eureka: false
+    fetch-registry: false
 
 product:
   service:
